@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_REQUEST['url']) || empty($_REQUEST['style'])) {
+if (empty($_REQUEST['url']) || empty($_REQUEST['style']) || $_REQUEST['edit']) {
     echo <<< EOT
 <!DOCTYPE html lang="en">
 <html>
