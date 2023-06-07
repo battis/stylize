@@ -13,5 +13,9 @@
             "email": "seth@battis.net"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "deploy": "source .env; gcloud app deploy --project=$PROJECT --verbosity=info --promote --quiet",
+        "logs": "source .env; gcloud app logs tail -s default --project=$PROJECT"
+    }
 }
