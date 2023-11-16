@@ -3,7 +3,7 @@
   (empty($_REQUEST["style"]) &&
     empty($_REQUEST["script"]) &&
     empty($_REQUEST["X-WR-CALNAME"])) ||
-  $_REQUEST["edit"]
+  !empty($_REQUEST["edit"])
 ) { ?>
 <!DOCTYPE html lang="en">
 <html>
