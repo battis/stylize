@@ -16,7 +16,7 @@
     <form action="<?= $_SERVER["REQUEST_URI"] ?>">
         <div>
             <label>URL</label>
-            <input name="url" type="text" value="<?= $_REQUEST["url"] ?? "" ?>
+            <input name="url" type="text" value="<?= $_REQUEST["url"] ?? "" ?>"/>
         </div>
         <div>
             <label>Style block</label>
