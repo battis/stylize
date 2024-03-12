@@ -1,6 +1,6 @@
 .DS_Store
 .env
-.nova/
-!.nova/Artwork
-!.nova/Configuration.json
+*.cache
+/node_modules/
+/tools/
 /vendor/

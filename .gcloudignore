@@ -2,3 +2,6 @@
 !/app.yaml
 !/composer.*
 !/public
+/public/**/.DS_Store
+!/templates
+/templates/**/.DS_Store

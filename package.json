@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "deploy": "./bin/deploy.mjs"
+  },
+  "devDependencies": {
+    "@battis/eslint-config": "latest",
+    "@battis/partly-gcloudy": "^0.4.0",
+    "@battis/prettier-config": "latest",
+    "@battis/qui-cli": "^0.4.0"
+  },
+  "prettier": "@battis/prettier-config",
+  "eslintConfig": {
+    "extends": "@battis/eslint-config"
+  }
+}

@@ -1,21 +1,19 @@
 {
-    "name": "battis/stylize",
-    "description": "Append styles to a webpage for embedding elsewhere",
-    "license": "GPL-3.0",
-    "autoload": {
-        "psr-4": {
-            "Battis\\Stylize\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Seth Battis",
-            "email": "seth@battis.net"
-        }
-    ],
-    "require": {},
-    "scripts": {
-        "deploy": "source .env; gcloud app deploy --project=$PROJECT --verbosity=info --promote --quiet",
-        "logs": "source .env; gcloud app logs tail -s default --project=$PROJECT"
+  "name": "battis/stylize",
+  "description": "Append styles to a webpage for embedding elsewhere",
+  "license": "GPL-3.0",
+  "autoload": {
+    "psr-4": {
+      "Battis\\Stylize\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Seth Battis",
+      "email": "seth@battis.net"
+    }
+  ],
+  "require": {
+    "twig/twig": "^3.8"
+  }
 }
