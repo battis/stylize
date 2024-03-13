@@ -10,6 +10,13 @@
   },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
-    "extends": "@battis/eslint-config"
+    "extends": "@battis/eslint-config",
+    "env": {
+      "browser": true,
+      "node": false
+    },
+    "globals": {
+      "bootstrap": "readonly"
+    }
   }
 }

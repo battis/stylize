@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stylize</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="messages" class="z-3 position-fixed top-0 end-0"></div>
+    <div class="container">
+      <h1>Stylize</h1>
+      <form id="form" action="{{ action }}">
+        <input type="hidden" name="edit" value="true" />
+        <div class="mb-3">
+          <div class="form-floating">
+            <input
+              name="url"
+              id="url"
+              class="form-control"
+              type="text"
+              value="{{ url }}"
+            />
+            <label for="url">URL</label>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="btn btn-secondary"
+              name="edit"
+              value=""
+            >
+              Stylize
+            </button>
+            <button type="button" class="btn btn-secondary" id="edit-button">
+              Copy Edit URL
+            </button>
+            <button type="button" class="btn btn-primary" id="copy-button">
+              Copy Stylized URL
+            </button>
+          </div>
+        </div>
+
+        <ul class="nav nav-tabs" id="mode" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="html-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#html"
+              type="button"
+              role="tab"
+              aria-controls="html"
+              aria-selected="true"
+            >
+              Webpage
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="ics-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#ics"
+              type="button"
+              role="tab"
+              aria-controls="ics"
+              aria-selected="false"
+            >
+              Webcal Feed
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="mode-content">
+          <div
+            class="tab-pane fade show active"
+            id="html"
+            role="tabpanel"
+            aria-labelledby="html-tab"
+            tabindex="0"
+          >
+            <code>&lt;html&gt;</code>
+            <div class="ms-3">
+              <code>&lt;head&gt;</code>
+              <div class="form-floating ms-3">
+                <textarea name="head" id="head" class="form-control" cols="80">
+{{ head }}</textarea
+                >
+                <label for="head">HTML</label>
+              </div>
+              <div class="ms-3">
+                <code><br />...<br /><br />&lt;style&gt;</code>
+                <div class="form-floating ms-3">
+                  <textarea
+                    name="style"
+                    id="style"
+                    class="form-control"
+                    cols="80"
+                  >
+{{ style }}</textarea
+                  >
+                  <label for="style">CSS</label>
+                </div>
+                <code>&lt;/style&gt;</code>
+              </div>
+              <code>&lt;/head&gt;</code>
+            </div>
+            <div class="ms-3">
+              <code>&lt;body&gt;</code>
+              <div class="ms-3">
+                <code><br />...<br /><br />&lt;script&gt;</code>
+                <div class="form-floating indent">
+                  <textarea
+                    name="script"
+                    id="script"
+                    class="form-control"
+                    cols="80"
+                  >
+{{ script }}</textarea
+                  >
+                  <label for="script">JS</label>
+                </div>
+                <code>&lt;/script&gt;</code>
+              </div>
+              <code>&lt;/body&gt;</code>
+            </div>
+            <code>&lt;/html&gt;</code>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="ics"
+            role="tabpanel"
+            aria-labelledby="ics-tab"
+            tabindex="0"
+          >
+            <div class="d-flex">
+              <code>BEGIN:VCALENDAR<br />X-WR-CALNAME:</code>
+              <div class="flex-grow-1">
+                <code><br /></code>
+                <div class="form-floating">
+                  <input
+                    name="xWrCalname"
+                    id="xWrCalname"
+                    class="form-control"
+                    value="{{ xWrCalname }}"
+                  />
+                  <label for="xWrCalname">Calendar Name</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <code><br />...</code>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
