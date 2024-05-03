@@ -76,6 +76,20 @@
               Webcal Feed
             </button>
           </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="regex-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#regex"
+              type="button"
+              role="tab"
+              aria-controls="ics"
+              aria-selected="false"
+            >
+              RegEx
+            </button>
+          </li>
         </ul>
 
         <div class="tab-content" id="mode-content">
@@ -139,7 +153,7 @@
             id="ics"
             role="tabpanel"
             aria-labelledby="ics-tab"
-            tabindex="0"
+            tabindex="1"
           >
             <div class="d-flex">
               <code>BEGIN:VCALENDAR<br />X-WR-CALNAME:</code>
@@ -158,6 +172,49 @@
             </div>
             <div>
               <code><br />...</code>
+              <div class="d-flex">
+                <code>BEGIN:VEVENT<br />TRANSP:</code>
+                <div class="flex-grow-1">
+                  <div class="form-floating">
+                    <input
+                      name="transp"
+                      id="transp"
+                      class="form-control"
+                      value="{{ transp }}"
+                    />
+                    <label for="transp">Free/Busy</label>
+                  </div>
+                </div>
+              </div>
+              <code><br />...</code>
+            </div>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="regex"
+            role="tabpanel"
+            aria-labeledby="regex-tab"
+            tabindex="2"
+          >
+            <p>Find and replace text using regular expressions.</p>
+            <div class="form-floating">
+              <input
+                name="search"
+                id="search"
+                class="form-control"
+                value="{{ search }}"
+              />
+              <label for="summary_search">search</label>
+            </div>
+            <div class="form-floating">
+              <input
+                name="replace"
+                id="replace"
+                class="form-control"
+                value="{{ replace }}"
+              />
+              <label for="replace">replace</label>
             </div>
           </div>
         </div>

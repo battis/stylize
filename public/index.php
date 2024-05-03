@@ -5,6 +5,8 @@ use Twig\Loader\FilesystemLoader;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$_GET['xwrCalname'] = $_GET['X-WR-CALNAME'];
+
 if (
     empty($_GET['url']) ||
     (empty($_GET['style']) &&
@@ -63,5 +65,15 @@ if (!empty($_GET['xWrCalname'])) {
     header(
         "Content-Disposition: attachment; filename={$_GET['xWrCalname']}.ics"
     );
+}
+if (!empty($_GET['transp'])) {
+    $html = str_replace(
+        'END:VEVENT',
+        "TRANSP:{$_GET['transp']}\r\nEND:VEVENT",
+        $html
+    );
+}
+if (!empty($_GET['search']) && !empty($_GET['replace'])) {
+    $html = preg_replace($_GET['search'], $_GET['replace'], $html);
 }
 echo $html;
