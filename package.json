@@ -6,7 +6,7 @@
     "@battis/eslint-config": "latest",
     "@battis/partly-gcloudy": "^0.6.3",
     "@battis/prettier-config": "latest",
-    "@battis/qui-cli": "^0.9.1"
+    "@battis/qui-cli": "^2.1.1"
   },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
