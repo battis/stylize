@@ -5,7 +5,9 @@ use Twig\Loader\FilesystemLoader;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$_GET['xwrCalname'] = $_GET['X-WR-CALNAME'];
+if (isset($_GET['X-WR-CALNAME'])) {
+    $_GET['xwrCalname'] = $_GET['X-WR-CALNAME'];
+}
 
 if (
     empty($_GET['url']) ||
