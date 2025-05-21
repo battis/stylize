@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "deploy": "./bin/deploy.mjs"
+    "deploy": "node ./bin/deploy.mjs -v"
   },
   "devDependencies": {
-    "@battis/eslint-config": "latest",
-    "@battis/partly-gcloudy": "^0.6.9",
-    "@battis/prettier-config": "latest",
-    "@battis/qui-cli": "^0.9.9"
+    "@battis/eslint-config": "^2.0.3",
+    "@battis/partly-gcloudy": "^1.1.5",
+    "@battis/prettier-config": "^1.6.0",
+    "@battis/qui-cli.core": "^2.1.0"
   },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
