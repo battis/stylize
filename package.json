@@ -3,21 +3,10 @@
     "deploy": "node ./bin/deploy.mjs -v"
   },
   "devDependencies": {
-    "@battis/eslint-config": "^2.0.3",
+    "@battis/eslint-config": "^2.0.4",
     "@battis/partly-gcloudy": "^1.1.5",
-    "@battis/prettier-config": "^1.6.0",
+    "@battis/prettier-config": "^1.6.1",
     "@battis/qui-cli.core": "^2.1.0"
-  },
-  "prettier": "@battis/prettier-config",
-  "eslintConfig": {
-    "extends": "@battis/eslint-config",
-    "env": {
-      "browser": true,
-      "node": false
-    },
-    "globals": {
-      "bootstrap": "readonly"
-    }
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
