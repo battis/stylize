@@ -44,8 +44,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.24.6':
-    resolution: {integrity: sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==}
+  '@babel/runtime@7.27.6':
+    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -1145,9 +1145,6 @@ packages:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
     engines: {node: '>= 0.10'}
 
-  regenerator-runtime@0.14.1:
-    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-
   regexp-to-ast@0.5.0:
     resolution: {integrity: sha512-tlbJqcMHnPKI9zSrystikWKwHkBqu2a/Sgw01h3zFjvYrMxEDYHzzoMZnUrbIfpTFEsoRnnviOXNCzFiSc54Qw==}
 
@@ -1417,9 +1414,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.27.6
 
-  '@babel/runtime@7.24.6':
-    dependencies:
-      regenerator-runtime: 0.14.1
+  '@babel/runtime@7.27.6': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -2712,8 +2707,6 @@ snapshots:
     dependencies:
       resolve: 1.22.8
 
-  regenerator-runtime@0.14.1: {}
-
   regexp-to-ast@0.5.0: {}
 
   resolve-from@4.0.0: {}
@@ -2950,7 +2943,7 @@ snapshots:
 
   yup@0.32.9:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.27.6
       '@types/lodash': 4.17.4
       lodash: 4.17.21
       lodash-es: 4.17.21
