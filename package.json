@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "node ./bin/deploy.mjs -v"
+    "deploy": "op run --env-file ./.env -- node ./bin/deploy.mjs -v"
   },
   "devDependencies": {
     "@battis/eslint-config": "^2.0.4",
