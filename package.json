@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "op run --env-file ./.env -- node ./bin/deploy.mjs -v"
+    "deploy": "op run --env-file ./.env -- ./scripts/deploy.mjs -v"
   },
   "type": "module",
   "devDependencies": {
