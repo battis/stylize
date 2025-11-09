@@ -20,12 +20,18 @@ importers:
       '@inquirer/select':
         specifier: ^4.4.1
         version: 4.4.1
+      '@qui-cli/colors':
+        specifier: ^3.1.0
+        version: 3.1.0
       '@qui-cli/core':
         specifier: ^4.1.0
         version: 4.1.0(@qui-cli/colors@3.1.0)(@qui-cli/plugin@4.0.0)
       '@qui-cli/env-1password':
         specifier: ^1.0.4
         version: 1.0.4(@qui-cli/env@5.0.1(@qui-cli/plugin@4.0.0)(@qui-cli/root@3.0.4(@qui-cli/plugin@4.0.0)))(@qui-cli/plugin@4.0.0)(@qui-cli/root@3.0.4(@qui-cli/plugin@4.0.0))
+      '@qui-cli/log':
+        specifier: ^4.0.0
+        version: 4.0.0(@qui-cli/plugin@4.0.0)(@qui-cli/root@3.0.4(@qui-cli/plugin@4.0.0))
       '@qui-cli/shell':
         specifier: ^3.0.3
         version: 3.0.3(@qui-cli/log@4.0.0(@qui-cli/plugin@4.0.0)(@qui-cli/root@3.0.4(@qui-cli/plugin@4.0.0)))(@qui-cli/plugin@4.0.0)

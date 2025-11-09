@@ -2,10 +2,11 @@
 
 import gcloud from '@battis/partly-gcloudy';
 import select from '@inquirer/select';
+import { Colors } from '@qui-cli/colors';
 import { Core } from '@qui-cli/core';
 import { Env } from '@qui-cli/env-1password';
+import { Log } from '@qui-cli/log';
 import { Shell } from '@qui-cli/shell';
-import fs from 'node:fs';
 
 (async () => {
   const {
@@ -36,7 +37,12 @@ import fs from 'node:fs';
     await gcloud.services.enable(gcloud.services.API.CloudRunAdminAPI);
     await gcloud.services.enable(gcloud.services.API.ArtifactRegistryAPI);
   }
-  Shell.exec(
-    `gcloud run deploy stylize  --source . --region="${region}" --project="${projectId}" --format=json`
+  const app = JSON.parse(
+    Shell.exec(
+      `gcloud run deploy stylize  --source . --region="${region}" --project="${projectId}" --format=json`
+    ).stdout
+  );
+  Log.info(
+    `${app.kind} ${Colors.value(app.metadata.name)} deployed to ${Colors.url(app.status.url)}`
   );
 })();
