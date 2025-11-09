@@ -3,21 +3,21 @@
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 if (isset($_GET['X-WR-CALNAME'])) {
     $_GET['xwrCalname'] = $_GET['X-WR-CALNAME'];
 }
 
 if (
-    empty($_GET['url']) ||
-    (empty($_GET['style']) &&
-        empty($_GET['script']) &&
-        empty($_GET['xWrCalname']) &&
-        empty($_GET['head'])) ||
-    !empty($_GET['edit'])
+    empty($_GET['url'])
+    || (empty($_GET['style'])
+        && empty($_GET['script'])
+        && empty($_GET['xWrCalname'])
+        && empty($_GET['head']))
+    || !empty($_GET['edit'])
 ) {
-    $twig = new Environment(new FilesystemLoader(__DIR__ . '/../templates'));
+    $twig = new Environment(new FilesystemLoader(__DIR__ . '/templates'));
     echo $twig->render(
         'form.html',
         array_merge(

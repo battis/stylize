@@ -3,5 +3,4 @@
 .env.*
 *.cache
 /node_modules/
-/tools/
 /vendor/

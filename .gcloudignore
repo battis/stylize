@@ -1,7 +1,7 @@
 *
-!/app.yaml
 !/composer.*
-!/public
-/public/**/.DS_Store
+!/assets
+/assets/**/.DS_Store
+!index.php
 !/templates
 /templates/**/.DS_Store

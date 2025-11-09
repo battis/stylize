@@ -2,14 +2,16 @@
   "version": "0.3.0",
   "type": "module",
   "scripts": {
-    "deploy": "op run --no-masking --env-file ./.env -- ./scripts/deploy.mjs -v"
+    "deploy": "source .env; ./scripts/deploy.mjs -v --serviceAccountToken \"$(op item get --account $OP_ACCOUNT --reveal --field credential $OP_TOKEN)\""
   },
   "devDependencies": {
     "@battis/eslint-config": "^2.0.7",
-    "@battis/partly-gcloudy": "^1.4.1",
+    "@battis/partly-gcloudy": "^2.0.0",
     "@battis/prettier-config": "^1.7.0",
-    "@qui-cli/core": "^4.0.1",
-    "@qui-cli/shell": "^3.0.1"
+    "@inquirer/select": "^4.4.1",
+    "@qui-cli/core": "^4.1.0",
+    "@qui-cli/env-1password": "^1.0.4",
+    "@qui-cli/shell": "^3.0.3"
   },
-  "packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8"
+  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd"
 }
