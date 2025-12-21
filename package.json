@@ -5,14 +5,14 @@
     "deploy": "source .env; ./scripts/deploy.mjs --serviceAccountToken \"$(op item get --account $OP_ACCOUNT --reveal --field credential $OP_TOKEN)\""
   },
   "devDependencies": {
-    "@battis/eslint-config": "^2.0.7",
-    "@battis/partly-gcloudy": "^2.0.0",
-    "@battis/prettier-config": "^1.7.0",
-    "@inquirer/select": "^4.4.1",
-    "@qui-cli/colors": "^3.1.0",
-    "@qui-cli/core": "^4.1.0",
-    "@qui-cli/env-1password": "^1.0.4",
-    "@qui-cli/log": "^4.0.0",
+    "@battis/eslint-config": "^2.0.8",
+    "@battis/partly-gcloudy": "^3.1.0",
+    "@battis/prettier-config": "^1.7.2",
+    "@inquirer/select": "^5.0.3",
+    "@qui-cli/colors": "^3.1.1",
+    "@qui-cli/core": "^5.0.1",
+    "@qui-cli/env-1password": "^1.1.0",
+    "@qui-cli/log": "^4.0.1",
     "@qui-cli/shell": "^3.0.3"
   },
   "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd"
