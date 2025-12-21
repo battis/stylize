@@ -1,10 +1,26 @@
 <!--- BEGIN HEADER -->
-
 # Changelog
 
 All notable changes to this project will be documented in this file.
-
 <!--- END HEADER -->
+
+## [0.5.0](https://github.com/battis/stylize/compare/v0.4.0...v0.5.0) (2025-12-21)
+
+### ⚠ BREAKING CHANGES
+
+* Deploy to Cloud Run ([9a140d](https://github.com/battis/stylize/commit/9a140d0998e34461d664e3265f89b4abfe8a95a7))
+
+### Features
+
+* Store secrets in 1Password ([00fe8b](https://github.com/battis/stylize/commit/00fe8bcdf24df132fd7e514d68239271fb524381))
+
+### Bug Fixes
+
+* Reduce resource usage on Google App Engine ([86cee4](https://github.com/battis/stylize/commit/86cee43eac9c0828bbfd0a9999a0b2219cfe446e))
+* Safer GET param checking ([a909f3](https://github.com/battis/stylize/commit/a909f3d0046228ef6f69597297c68170e29e4e05))
+
+
+---
 
 ## [0.4.0](https://github.com/battis/stylize/compare/v0.3.0...v0.4.0) (2024-03-13)
 
